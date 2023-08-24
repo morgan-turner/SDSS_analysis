@@ -1,8 +1,9 @@
 # Classification of Celestial Objects with Machine Learning Algorithms
+<p align="center">
+<img width="800" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/b94bae56-0d1d-4322-8fe2-70bf0b87cad6"></p>
 
-<img width="800" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/b94bae56-0d1d-4322-8fe2-70bf0b87cad6"><br>
-<i>Spiral galaxy LEDA 2046648 as captured by NASA’s JWST</i>[^JWST]
-<br><br>
+Spiral galaxy LEDA 2046648 as captured by NASA’s JWST[^JWST]
+<br><br><br>
 
 ## SUMMARY
 
@@ -47,28 +48,21 @@ The Decision Tree parameters were adjusted to a maximal depth of 20 with a minim
 
 The <i>k</i>-NN model using a weighted <i>k</i> of 5 produced a correct prediction of celestial object class with 93.56% accuracy. 
 
-
-<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/3f1818e0-a1be-428d-baf5-fa795c0ecfc4"><br>
-<i>k-NN performance results in RapidMiner Studio</i>
-
+<p align="center">
+<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/3f1818e0-a1be-428d-baf5-fa795c0ecfc4"></p><br>
 
 Lowering the <i>k</i> value to 3 did not make much difference to the accuracy of the model (93.90% accuracy). However, even optimized, the model was cumbersome to run with quite a long duration of execution. At 100,000 observations and 33 attributes, the SDSS-V dataset is of moderate size and complexity. Running larger, more detailed astronomical datasets through a <i>k</i>-NN model for the purposes of classification would require significant time and resources.
 
-
-<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/2b1b43c3-bb89-4d04-a06c-b330c468c3eb"><br>
-<i>A visual representation of <i>k</i>-NN groupings using infrared PSF magnitude vs Petrosian Radii</i>
-
-
+<p align="center">
+<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/2b1b43c3-bb89-4d04-a06c-b330c468c3eb"></p><br>
 
 The Decision Tree model produced a correct prediction of celestial object class with 98.64% accuracy. 
-
-<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/9bc6e01f-e30e-4ce2-a0cf-1ece411b0511"><br>
-<i>Decision Tree performance results in RapidMiner Studio</i>
+<p align="center">
+<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/9bc6e01f-e30e-4ce2-a0cf-1ece411b0511"></p><br>
 
 The model was not only able to categorize the data much more naturally with higher accuracy than the <i>k</i>-NN model, but additionally provided much deeper insight as to which astronomic measurements could broadly be used to define groups of celestial bodies. After two runs of this model with minor adjustments to tree depth and leaf size, the Decision Tree was able to produce accurate predictions using only redshift measurements. This makes a great deal of logical sense: in astronomy, stars, galaxies, and quasi-stellar objects are easily stratified by their distances from Earth, and this would be reflected in the measurement of each object’s redshift. 
-
-<img width="400" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/97a7811e-55c7-4ac6-9b88-497c588aaf43"><br>
-<i>The Decision Tree model based on redshift measurements</i>
+<p align="center">
+<img width="400" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/97a7811e-55c7-4ac6-9b88-497c588aaf43"></p>
 
 In conclusion, the Decision Tree model was found to be more appropriate for this astronomical survey dataset than the <i>k</i>-NN model due to its shorter run time and the simplicity of its categorization logic. Additionally, the Decision Tree produced a 5% higher percentage of accurate classification predictions than the <i>k</i>-NN algorithm.
 
@@ -91,7 +85,7 @@ Partition data for training and application datasets:<br>
 <img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/90b2a79c-88c1-40d7-8239-f7c03e5711da">
 
 Assign <i>k</i> value, weights, and measure types (see Parameters box):<br>
-<img width="404" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/c421c180-ac07-4f33-98ab-c08d0004f4c7">
+<img width="700" alt="image" src="https://github.com/morgan-turner/SDSS_analysis/assets/92185928/c421c180-ac07-4f33-98ab-c08d0004f4c7">
 
 #### Decision Tree
 
